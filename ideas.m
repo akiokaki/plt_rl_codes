@@ -58,3 +58,4 @@ for id = 1:totalNumPlayers
 end
 %Q = (beta * probability^gamma)/(beta * probability^gamma +(1-probability)
 
+%new stuff
