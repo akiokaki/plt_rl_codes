@@ -59,3 +59,4 @@ end
 %Q = (beta * probability^gamma)/(beta * probability^gamma +(1-probability)
 
 %new stuff
+%new line
