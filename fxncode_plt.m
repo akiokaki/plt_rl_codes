@@ -11,7 +11,7 @@ y = 0;
 	%epsilon makes sure the MLE function doesn't hit below 0
     epsilon = 0.00000001;
     lambda = exp(q(1));
-    alpha = q(2);  
+    alpha = 1/(1+exp(q(2)));
  
     
     %%% Matrix for cues presented 
@@ -40,7 +40,7 @@ y = 0;
     
 	%%% Update values of cues
     t=1;
-	while t<120
+	while t<=120
 		switch (picked(t,1)) 
 			case 0
 				Q0(t+1,:) = Q0(t,:) + alpha * (points(t,1)- Q0(t,:));
@@ -102,4 +102,3 @@ y = 0;
 	
     % MLE function
     y = y-1*sum ( log(tmpP+epsilon));
-end
